@@ -1,0 +1,40 @@
+[
+  {
+    "type": "header",
+    "name": "HOME"
+  },
+  {
+    "name": "Dashboard",
+    "url": "dashboard",
+    "icon": "icon-dashboard"
+  },
+  {
+    "name": "Overview",
+    "url": "overview",
+    "icon": "icon-home"
+  },
+  {
+    "name": "Updates",
+    "url": "updates",
+    "count": 8,
+    "icon": "icon-refresh"
+  },
+  {
+    "type": "header",
+    "name": "Contents"
+  },
+  {
+    "name": "Articles",
+    "url": "articles",
+    "icon": "icon-inbox"
+  },
+  {
+    "type": "header",
+    "name": "Admin"
+  },
+  {
+    "name": "Admin",
+    "url": "admin",
+    "icon": "icon-cogs"
+  }
+]

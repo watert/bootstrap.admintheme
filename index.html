@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Dashboard Theme </title>
+	<link rel="stylesheet/less" href="bsadmin.less">
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/bootstrap/css/font-awesome.min.css">
+	<script src="libs/less-1.3.3.min.js"></script>
+	<script src="libs/jquery-1.9.1.min.js"></script>
+	<script src="js/base.js"></script>
+</head>
+<body class="myadmin">
+	<div id="container" class="container-fluid">
+		<div class="row-fluid">
+			<!-- Admin Side -->
+			<div id="adminSide" class="span3">
+			</div>
+			<script src="js/side.classes.js"></script>
+			<script> 
+				$("#adminSide").sideMenu({
+					current:"Dashboard",
+					url:"side.json" });
+			</script>
+
+
+			<div id="mainPanel" class="span9">
+				<div class="main"> </div>
+				<script> $(".main").load("./dashboard-fake.html"); </script>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

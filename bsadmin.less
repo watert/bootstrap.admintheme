@@ -1,0 +1,90 @@
+/**
+Admin Theme by [@waterwu](http://itswater.com/);
+*/
+
+@colorLink:#000; 
+@sideBack:#DDD; @sideColor:#555; @sideLink:#9CF;/* Side */
+@brandBack:hsl(210, 55%, 55%); @brandColor:#FFF;
+@sideActiveBack:hsl(200,100%,50%); ;@sideActiveColor:#FFF;
+@widgetBack:hsl(200,100%,97%);@widgetActive:hsl(200,80%,40%);@widgetColor:#333;
+@colorBG2:hsl(220, 54%, 56%); 
+	@colorFG2:hsl(0,0%,30%); @colorLink2:hsl(200,100%,30%);
+
+.textshadow(@top:0px,@bottom:1px,@color:hsla(0,0%,0%,0.5)) { 
+	text-shadow: @top @bottom 0px @color; }
+body.myadmin { /* Frame */
+	padding:0;
+	.container-fluid {margin:0;padding:0; 
+		min-width:980px;max-width:1200px;
+	}
+	.sidenav { 
+		background:@sideBack; border-right:1px solid darken(@sideBack,10%); color:@sideColor;
+		// box-shadow:0 0 50px hsla(0%,0%,0%,0.1) inset;
+		.brand {
+			margin:0;
+			background: @brandBack;
+			color: @brandColor;
+			border: 4px solid darken(@brandBack,20%);
+			border-width: 0 1px;
+		}
+		a {color:@sideLink;}
+		a:hover { color:@sideColor;background: hsla(0,0,0,0.1);}
+		
+		.split,.side-item,.nav-list a {
+			border-color:lighten(@sideBack,5%) transparent darken(@sideBack,5%) ;
+		}
+		.nav-list {
+			.nav-header {font-size:14px;color:@sideColor;text-shadow:none;margin-top:1em;}
+			li {
+				line-height:2em;margin-top:1px;
+				&.active a {
+					color:@sideActiveColor;background:@sideActiveBack;
+					border-color:darken(@sideActiveBack,5%);
+					border-right:6px solid darken(@sideActiveBack,10%);
+					&:hover { 
+						background:lighten(@sideActiveBack,5%);
+					}
+				}
+			}
+
+			a {
+				background: lighten(@sideBack,10%);
+				&:hover { background:lighten(@sideBack,25%) ; }
+				color: #333;
+				border: 1px solid lighten(@sideBack,20%);
+				border-width: 1px 0 0;
+				box-shadow: 0 1px 1px darken(@sideBack,20%);
+			}
+		}
+	}
+	.main { 
+		background:#FFF; 
+		.title{ position:relative;
+			hr {margin:10px 0;}
+			.global-query { position:absolute;right:10px;bottom:0;margin:0; }
+		}
+		.content {min-height:600px;
+		}
+	}
+}
+
+/* Details */
+.sidenav {
+	.brand {font:bold 20px helvetica;text-align: center; padding:10px; }
+	.side-item {
+		a {padding:5px 10px;font-size:16px;text-shadow:none; }
+	} 
+}
+.footer { font-family:Georgia; }
+.widget {
+	background:@widgetBack;color:@widgetColor;padding:5px;border-radius:2px;
+	border:1px solid darken(@widgetBack,5%);margin-bottom:1em;
+	.actions { display:none;  
+		i {cursor:pointer; color:@widgetActive;  } 
+	}
+	&:hover .actions { display:inline-block; }
+	.widget-hd {border-bottom:1px dashed desaturate(darken(@widgetBack,10%),40%);
+		margin-bottom:10px;line-height:2em;font-size:16px;
+	}
+	.widget-bd {height:200px;}
+}
